@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+   <head>
+   <meta charset="utf-8" />
+   <title>My Node.js page!</title>
+   </head> 
+   <body>
+    <div class="form-header">
+        <h2>Submit Salesforce Credential</h2>
+      </div>
+      <form method="post" action="/user_credential" novalidate>
+        <div class="form-field">
+            <label for="email">Username</label>
+            <input class="input" id="username" name="username" type="text" value="" />
+          </div>
+          <div class="form-field">
+            <label for="email">Password</label>
+            <input class="input" id="password" name="password" type="text" value="" />
+          </div>
+          <div class="form-field">
+            <label for="email">Security Token</label>
+            <input class="input" id="token" name="token" type="text" value="" />
+          </div>
+        <div class="form-actions">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+   </body>
+  </html>

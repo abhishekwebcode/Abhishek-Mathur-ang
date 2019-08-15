@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="testParquetRead.js" type="NodeJSConfigurationType" editBeforeRun="true" singleton="false" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser start="true" with-js-debugger="true" url="http://localhost:3002" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>

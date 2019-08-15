@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row" style="border-bottom: 1px solid #e5e5e5;">
+        <p class="center">
+            Click to migrate Data to S3
+        </p>
+        <button ng-if="!loading" class="btn btn-info {{disabled}}" ng-click="startS3(this)" style="width: 100%;">Start Migration</button>
+        <center>
+        <br />
+            <div class="progress" ng-if="loading">
+                <div class="indeterminate"></div>
+            </div>
+    </center>
+    </div>
+
+    <div class="container">
+        <div class="row" ng-if="loadfingFiles">
+            Loading Your Files...
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="file in s3Files">
+            <div class="row">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{file.name}}</span>
+                        <br>
+                        <span>Size {{file.size}}B</span>
+                    </div>
+
+                    <div class="card-action">
+                        <button class="btn btn-info " ng-click="download(file)">
+                            Download File
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

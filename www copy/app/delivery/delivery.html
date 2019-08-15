@@ -1,0 +1,59 @@
+<ion-view view-title="Delivery"  hide-nav-bar=true>
+    <div class="bar bar-header bar-light">
+        <button class="button button-icon button-clear ion-navicon nav-icon" menu-toggle="left"></button>
+        <h1 class="title dash-title">Delivery</h1>
+        <i class="ion-ios-cart dash-cart"></i>
+    </div>
+    <ion-content class="dash-content">
+        <div class="card delivery-card">
+            <a class="item item-thumbnail-left delivery-item" href="#">
+                <img class="delivery-card-image" ng-src="img/boy1.jpg">
+                <h2 class="delivery-name">Floral Jacket</h2>
+                <p class="delivery-price">$19.00</p>
+                <div class="delivery-product">
+                    <p class="delivery-qty">Qty:</p>
+                    <p class="delivery-price">5</p>
+                </div>
+                <div class="delivery-product">
+                    <p class="delivery-qty">Size:</p>
+                    <p class="delivery-price">XS</p>
+                </div>
+            </a>
+        </div>
+        <div class="list">
+            <div class="delivery-form-field">
+                <label class="item item-input item-floating-label delivery-label">
+                    <span class="input-label delivery-float">Name</span>
+                    <input type="text" class="delivery-input" placeholder="Name">
+                </label>
+            </div>
+            <div class="delivery-form-field">
+                <label class="item item-input item-floating-label delivery-label">
+                    <span class="input-label delivery-float">Address</span>
+                    <input type="text" class="delivery-input" placeholder="Address">
+                </label>
+            </div>
+            <div class="delivery-form-field">
+                <label class="item item-input item-floating-label delivery-label">
+                    <span class="input-label delivery-float">Pincode</span>
+                    <input type="text" class="delivery-input" placeholder="Pincode">
+                </label>
+            </div>
+            <div class="delivery-form-field">
+                <label class="item item-input item-floating-label delivery-label">
+                    <span class="input-label delivery-float">Mobile Number</span>
+                    <input type="tel" class="delivery-input" placeholder="Mobile Number">
+                </label>
+            </div>
+            <div class="delivery-form-field">
+                <label class="item item-input item-floating-label delivery-label">
+                    <span class="input-label delivery-float">Email</span>
+                    <input type="text" class="delivery-input" placeholder="Email">
+                </label>
+            </div>
+        </div>
+        <button class="button button-full button-royal cart-button" style="margin-top:0px !important;" ng-click="buynow()">
+            BUY NOW
+        </button>
+    </ion-content>
+</ion-view>

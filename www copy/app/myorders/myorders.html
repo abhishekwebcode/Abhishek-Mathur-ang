@@ -1,0 +1,11 @@
+﻿<ion-view view-title="My Orders">
+    <ion-content>
+        <div ng-repeat="data in myOrders">
+            <div class="card cart-product-card" style="padding: 10px" ng-click="openOrder(data.id)">
+                <h2 class="cart-name"> Order Id: <span>{{data.id}}</span></h2>
+                <h2 class="cart-name">Date: <span>{{data.date_created | date: 'MM/dd/yyyy'}}</span></h2>
+                <h2 class="cart-name"> Status: <span>{{data.status}}</span></h2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

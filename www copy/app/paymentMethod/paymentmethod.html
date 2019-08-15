@@ -1,0 +1,157 @@
+<ion-view cache-view="false">
+    <ion-content>
+        <div class="signupDiv">
+            <div class="signuptopDiv" style="height: 70px;">
+                <img src="img/icon.png" class="logo-img">
+            </div>
+            <div class="signuptopDiv" style="margin-top: 10%;">
+                <p class="signinTitle payment-title">Please select your method of payment
+                </p>
+            </div>
+            <div style="margin-top: 10%;">
+                <div class="payment-type">
+                    <ion-list class="payment-list" ng-repeat="method in paymentMethods">
+                        <ion-radio class="payment-item" ng-if="method.enabled" ng-model="user.payment_method_title" ng-click="radio(method)" ng-value="method.method_title">{{method.method_title}}</ion-radio>
+                    </ion-list>
+                </div>
+            </div>
+        </div>
+        <form class="signupForm" name="myForm">
+            <p class="signinTitle payment-text">Billing Address</p>
+            <div class="list">
+                <div class="signupText">
+                    <label class="item item-input item-floating-label  signin-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.first_name" placeholder="First Name" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label  signin-label">
+                        <span class="input-label">Last Name</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.last_name" placeholder="Last Name" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label  signin-label">
+                        <span class="input-label">Company</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.company" placeholder="Company" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" class="signin-input" readonly ng-model="user.billing.email" placeholder="Email" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Phone</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.phone" placeholder="Phone" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Address 1</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.address_1" placeholder="Address 1" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Address 2</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.address_2" placeholder="Address 2" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">City</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.city" placeholder="City" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">State</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.state" placeholder="State" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Postal code</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.postcode" placeholder="Postal code" required>
+                    </label>
+                </div>
+                <div class="signupText">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Country</span>
+                        <input type="text" class="signin-input" ng-model="user.billing.country" placeholder="Country" required>
+                    </label>
+                </div>
+            </div>
+            <div class="terms" style=" text-align: left">
+                <div class="signupCheck">
+                    <input type="checkbox" ng-model="checked" ng-click="check()" class="signupCheckbox"  ng-init="checked=true">
+                </div>
+                <div class="signupTerms">
+                    <p class="signinTermstext" style="font-size: 12px; margin-bottom: 10px;">Shipping address is same as Billing address
+                    </p>
+                </div>
+            </div>
+            <div ng-if="checked==false">
+                <p class="signinTitle payment-text">Shipping Address</p>
+                <div class="list">
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label  signin-label">
+                            <span class="input-label">First Name</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.first_name" placeholder="First Name" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label  signin-label">
+                            <span class="input-label">Last Name</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.last_name" placeholder="Last Name" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">Address 1</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.address_1" placeholder="Address 1" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">Address 2</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.address_2" placeholder="Address 2" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">City</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.city" placeholder="City" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">State</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.state" placeholder="State" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">Postal code</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.postcode" placeholder="Postal code" required>
+                        </label>
+                    </div>
+                    <div class="signupText">
+                        <label class="item item-input item-floating-label signin-label">
+                            <span class="input-label">Country</span>
+                            <input type="text" class="signin-input" ng-model="user.shipping.country" placeholder="Country" required>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button class="button signinButton" ng-if="user.payment_method != 'cod'" ng-disabled="myForm.$invalid " ng-click="payNow()" style="width: 80%;margin-left: 10%">Pay Now</button>
+        <button class="button signinButton" ng-if="user.payment_method == 'cod'" ng-disabled="myForm.$invalid " ng-click="createOrder()" style="width: 80%;margin-left: 10%">Place your order</button>
+    </ion-content>
+</ion-view>
+
+ 

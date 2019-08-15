@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      var userMeta=<%- JSON.stringify(data)%>;
+    </script>
+    <meta charset="utf-8">
+    <title>Salesforce Analytics</title>
+    <meta name="description" content="">
+    <!-- twitter bootstrap and additional styles -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- navigation configuration (the list of links) -->
+  </head>
+  <body ng-app="angularjsSimpleWebsiteApp" class='container'>
+
+    <!-- header -->
+    <!-- uses NavigationLinks as a controller -->
+    <div class="header" title='comes from index.html'>
+      <ul class="nav nav-pills pull-right" ng-controller='NavigationLinks'>
+        <!-- this is empty at start, but nav.js will create 
+             items in this list later. -->
+      </ul>
+      <h3 class="text-muted" id="company"></h3>
+    </div>
+
+    <!-- Your site or application content will appear here -->
+    <div ng-view="">
+
+      <h1>
+        Loading...
+      </h1>
+    </div>
+
+    <div class="footer" title='comes from index.html'>
+      <p>All Rights Reserved - 2019
+      </p>
+    </div>
+
+    <script type='text/javascript'>
+      // Define the paths, the partials (page templates) and the link names.
+      var Pages = {
+        '/':        ['main.html',    'Home'],
+        '/select':   ['select.html',   'Select Fields'],
+        '/contact': ['contact.html', 'Contact Us'],
+      };
+
+      var navPages = {
+        '/':        ['main.html',    'Home'],
+        "/logout" : ['main.html','Sign-out']
+      };
+    </script>
+    <script src="bower_components/jquery/jquery.js"></script>
+
+    <!-- nav.js is needed to generate link items in the ul.nav
+         at the page header. -->
+    <script src="scripts/nav.js"></script>
+
+    <!-- the angular core and the ngRoute module -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- the main angular app code -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  </body>
+</html>

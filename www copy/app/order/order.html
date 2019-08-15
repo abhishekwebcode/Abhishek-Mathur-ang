@@ -1,0 +1,62 @@
+<ion-view view-title="Delivery" hide-nav-bar=true cache-view="false">
+    <div class="bar bar-header bar-light">
+        <!-- <div class="back-icon" ng-click="back()"> -->
+        <!-- <i class="icon ion-android-arrow-back nav-back-icon" ></i> -->
+        <!-- </div> -->
+        <button class="button button-clear" ng-click="back()">
+            <i class="icon ion-android-arrow-back nav-back-icon back-icon"></i>
+        </button>
+        <h1 class="title dash-title">Orders</h1>
+        <i class="ion-ios-cart dash-cart"></i>
+        <p ng-if="badge > 0" class="dash-badge">{{badge}}</p>
+    </div>
+    <ion-content class="dash-content">
+        <div ng-repeat="data in orderedItemList">
+            <div class="card cart-product-card">
+                <a class="item item-thumbnail-left cart-item" href="#">
+                    <img class="cart-img" ng-src="{{data.images[0].src}}">
+                    <h2 class="cart-name">{{data.name}}</h2>
+                    <div class="cart-product">
+                        <p class="cart-price-text">Price:</p>
+                        <p class="cart-price1">&#8377;{{data.price}}</p>
+                    </div>
+                    <div class="cart-product">
+                        <p class="cart-qty">Qty:</p>
+                        <div class="cart-add">
+                            <p class="cart-price">{{data.quantity}}</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cart-product" ng-if="data.size">
+                        <p class="cart-qty">Size:</p>
+                        <div class="cart-add">
+                            <p class="cart-price">{{data.size}}</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="cart-product">
+                        <p class="cart-price-text">Total:</p>
+                        <p class="cart-price1">&#8377;{{data.total}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="cart-totaldiv" style="margin-top: 10%;">
+            <div class="cart-product1">
+                <p class="cart-total-text">Subtotal:</p>
+                <p class="cart-total-price">&#8377;{{s_total}}</p>
+            </div>
+            <div class="cart-product1">
+                <p class="cart-total-text">Shipping:</p>
+                <p class="cart-total-price1">Flat rate</p>
+                <p style="display: none" class="cart-total-price">Calculate Shipping</p>
+                <p class="cart-total-price">{{shipping}}</p>
+            </div>
+            <div class="cart-product1">
+                <p class="cart-total-text">Total:</p>
+                <p class="cart-total-price">&#8377;{{total}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

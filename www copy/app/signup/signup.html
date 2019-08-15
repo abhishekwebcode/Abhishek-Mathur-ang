@@ -1,0 +1,60 @@
+<ion-view>
+  <ion-content>
+    <div class="signupDiv">
+      <div class="signuptopDiv" style="height: 120px;">
+        <img src="img/icon.png" class="logo-img">
+      </div>
+    </div>
+    <form class="signupForm" name="myForm">
+      <div class="list">
+
+        <div class="signupText">
+          <label class="item item-input item-floating-label  signin-label">
+            <span class="input-label">First Name</span>
+            <input type="text" class="signin-input" ng-model="user.first_name" placeholder="First Name" required>
+          </label>
+        </div>
+        <div class="signupText">
+          <label class="item item-input item-floating-label  signin-label">
+            <span class="input-label">Last Name</span>
+            <input type="text" class="signin-input" ng-model="user.last_name" placeholder="Last Name" required>
+          </label>
+        </div>
+        <div class="signupText">
+          <label class="item item-input item-floating-label signin-label">
+            <span class="input-label">Email</span>
+            <input type="email" class="signin-input" ng-model="user.email" placeholder="Email" required>
+          </label>
+        </div>
+        <div class="signupText">
+          <label class="item item-input item-floating-label signin-label">
+            <span class="input-label">Password</span>
+            <input type="password" class="signin-input" ng-model="user.password" placeholder="Password" required>
+          </label>
+        </div>
+
+        <div class="signupText">
+          <label class="item item-input item-floating-label signin-label">
+            <span class="input-label">Confirm Password</span>
+            <input type="password" class="signin-input" ng-model="user.confirmPassword" placeholder="Confirm Password" required>
+          </label>
+        </div>
+
+      </div>
+
+      <button class="button signinButton" ng-disabled="checked == false || myForm.$invalid" ng-click="doSignup(user)">Sign up</button>
+    </form>    
+    <div class="terms">
+      <div class="signupCheck">
+        <input type="checkbox" ng-model="checked" ng-click="check()" class="signupCheckbox">
+      </div>
+      <div class="signupTerms">
+        <p class="signinTermstext">By signing up, I agree to the
+          <span class="signinTermslink" ng-click="openModal()">Terms of Use</span>
+        </p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

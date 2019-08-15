@@ -1,0 +1,75 @@
+<ion-view view-title="Delivery" hide-nav-bar=true cache-view="false">
+    <div class="bar bar-header bar-light">
+        <button class="button button-clear" ng-click="back()">
+            <i class="icon ion-android-arrow-back nav-back-icon back-icon"></i>
+        </button>
+        <h1 class="title dash-title">Product Details</h1>
+        <i class="ion-ios-cart dash-cart" ng-click="mycart()"></i>
+        <p ng-if="badge > 0" class="dash-badge">{{badge}}</p>
+    </div>
+    <ion-content>
+        <ion-slide-box class="productSlidebox">
+            <ion-slide class="productSlide" ng-repeat="productImage in productDetails.images">
+                <img class="silder-img" src="{{productImage.src}}">
+            </ion-slide>
+        </ion-slide-box>
+        <div class="productDetails-content">
+            <h2 class="product-title">{{productDetails.name}}</h2>
+            <!-- <div class="col-50 product-regularprice" ng-if="productDetails.regular_price!=''" >
+                    &#8377;{{productDetails.regular_price}}
+                </div> -->
+            <div class="col-50 product-price" ng-bind-html="productDetails.price_html">
+            </div>
+            <div class="product-details" ng-bind-html="productDetails.description">
+            </div>
+            <div class="product-details" style="margin-top: 0% !important;font-weight: 700;margin-top: 0% !important;color: black;">SKU:
+                <span ng-if="productDetails.sku==''" style="margin-top: 0% !important;font-weight: 200;margin-top: 0% !important;color: #444;">
+                    N/A
+                </span>
+                <span ng-if="productDetails.sku!=''" style="margin-top: 0% !important;font-weight: 200;margin-top: 0% !important;color: #444;">
+                    {{productDetails.sku}}
+                </span>
+            </div>
+            <div class="product-details" style="margin-top: 0% !important;font-weight: 700; margin-top: 0% !important;color: black;">Categories:
+                <span ng-repeat="cat in productDetails.categories" style="margin-top: 0% !important;font-weight: 200;margin-top: 0% !important;color: #444;">
+                    {{cat.name}}
+                </span>
+            </div>
+            <div class="product-details" ng-if="size" style="margin-top: 0% !important;font-weight: 700; margin-top: 0% !important;color: black;">Size:
+                <span>
+                    <!--
+                    <select ng-model="selectedCat" ng-options="size for size in productSize" name="size" required >
+                    </select>
+                    -->
+                    <select ng-model="selectedCat" id="sizeSelect">
+                          <option ng-repeat="size1 in productSize" value="{{size1}}" required>{{size1}}</option>
+                    </select>
+
+                </span>
+            </div>
+            <ion-scroll direction="x" class="tab">
+                <ui class="scroller" ng-repeat="relatedItem in relatedProductDetailsList">
+                    <li class="scrollerTab" ng-click="openRelated(relatedItem)">
+                        <img class="related-img1" src="{{relatedItem.images[0].src}}">
+                        <h1 class="related-title">{{relatedItem.name}}</h1>
+                        <h2 class="dash-price" style="text-align: center" ng-bind-html="relatedItem.price_html"></h2>
+                    </li>
+                </ui>
+            </ion-scroll>
+        </div>
+
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="row cart-row">
+            <div class="col-50">
+                <div ng-if="productDetails.cart==false" ng-class="{ 'dash-adcart1' : productDetails.stock_quantity==0 }" ng-click="addtoCart(productDetails)"
+                    class="cart-addtocart">ADD TO CART</div>
+                <div ng-if="productDetails.cart==true" ng-class="{ 'dash-adcart1' : productDetails.stock_quantity==0 }" ng-click="removeCart(productDetails)"
+                    class="cart-addtocart"> REMOVE FROM CART</div>
+            </div>
+            <div class="col-50">
+                <div ng-click="buynow(productDetails)" class=" cart-button ">BUY NOW</div>
+            </div>
+        </div>
+    </div>
+</ion-view>

@@ -1,0 +1,1184 @@
+/* Empty. Add your own CSS if you like */
+/* Utilities */
+
+.link {
+    color: #116262;
+    font-weight: bold;
+}
+
+h4 {
+    color: #116262;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+h4:first-child {
+    border-top: none;
+    padding-top: initial;
+}
+
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.no-border {
+    border: none;
+}
+
+.static {
+    position: static;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
+}
+
+.blue-grey-900 {
+    background-color: #263238 !important;
+    color: #fff;
+}
+/* Menu */
+
+.menu .bar.bar-header.expanded {
+    background-image: url('../img/material-graphite.jpg');
+    background-size: 120%;
+    background-position: 0%;
+    transition: all .5s ease-in-out;
+}
+
+.item-complex .item-content,
+.item-radio .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 5px;
+  border: none;
+  }
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.item-radio input:checked ~ .item-content {
+    background: transparent;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+.item.item-radio .radio-icon {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item.item-radio:active .radio-icon {
+    opacity: 0;
+    transform: scale(1.6);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.directions.button-bar {
+    margin: 0 auto;
+    width: 33.333%;
+}
+
+.directions.button-bar button {
+    line-height: 26px;
+}
+
+.ion-arrow-right-c.top-left:before {
+    transform: rotate(-135deg);
+}
+
+.ion-arrow-right-c.top-right:before {
+    transform: rotate(-45deg);
+}
+
+.ion-arrow-right-c.bottom-left:before {
+    transform: rotate(-225deg);
+}
+
+.ion-arrow-right-c.bottom-right:before {
+    transform: rotate(45deg);
+}
+
+#modal {
+    background-color: #ef4e3a;
+    border-radius: 100%;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 50%;
+    bottom: 0;
+    opacity: 0;
+    width: 700px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.expand #modal {
+    background-color: #DBDBDB;
+    border-radius: 0;
+    border-top: solid 4px #ef4e3a;
+    opacity: 1;
+    z-index: 9;
+}
+/* CODE */
+
+.code {
+    color: #333;
+    font-family: monospace;
+    padding: 10px;
+    white-space: pre;
+}
+
+.code-wrapper {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.code-wrapper::before {
+    color: #1B5E20;
+    font-family: "Ionicons";
+    speak: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: '\f216 ';
+}
+
+.code-wrapper.active::before {
+    content: '\f207 ';
+}
+
+.code-wrapper .toggle {
+    color: #4CAF50;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 8px;
+    text-decoration: underline;
+}
+
+.code-wrapper .code {
+    opacity: 0;
+    margin-top: -20px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.1s all ease-in-out;
+    z-index: 9999999999;
+}
+
+.code-wrapper.code-wrapper-last .code {
+    position: relative;
+}
+
+.code-wrapper.active .code {
+    background: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    left: 16px;
+    height: initial;
+    margin-top: 15px;
+    padding: 15px;
+    right: 16px;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    width: initial;
+}
+
+.popover {
+    left: initial !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+.platform-android .popover{
+margin-top:10px;
+}
+/* signin */
+.signinDiv{
+    font-family: 'Roboto-Light';
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.signin-label{
+    padding-left: 0px !important;
+}
+.signin-input{
+    font-size: 16px !important;
+    height: 22px !important;
+}
+.signintopDiv{
+    margin: 0 auto;
+    margin-top: 36.5%;
+    margin-bottom: 12.2%;
+}
+.signinTitle{
+    font-family: 'Roboto-Light';
+    font-size: 24px;
+    text-align: center;
+    font-weight: 0 !important;
+    width: 86%;
+    margin: 0 auto;
+}
+.signinSpan{
+    font-family: 'Roboto-Light';
+    color: black;
+    font-weight: 600 !important;
+}
+.signinForm{
+    width: 74%;
+    margin-left: 13%;
+}
+span.input-label{
+    font-family: 'Roboto-Light';
+    color: #B075AC;
+    font-size: 12px;
+}
+.signinButton{
+    font-family: 'Roboto-Light';
+    width: 96%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    height: 30px !important;
+    background-color: #B075AC;
+    color: white;
+}
+.signinButton:hover{
+    color: #fff;
+}
+.forgotPassword{
+    font-family: 'Roboto-Light';
+    font-size: 16px;
+    color: #B075AC;
+    text-align: center;
+}
+.signinAcc{
+    text-align: center;
+    font-family: 'Roboto-Light';
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 100 !important;
+}
+.sigupAcc{
+    font-family: 'Roboto-Light';
+    margin-left: 5px; 
+    color: #B075AC;
+}
+/* signup */
+.signupIcon{
+    display: inline-block;
+    font-size: 30px;
+}
+.signupForm{
+    width: 80%;
+    margin-left: 10%;
+}
+.signuptopDiv{
+    margin: 0 auto;
+    margin-top: 0%;
+    margin-bottom: 6%;
+}
+.logo-img{
+    width: 125px;
+}
+.signupImg{
+    width: 20px;
+}
+.signupText{
+    margin-left: 2%;
+    display: inline-block;
+    width: 95%;
+}
+.signupDiv{
+    font-family: 'Roboto-Light';
+    text-align: center;
+    margin-top: 10%;
+}
+.terms{
+    font-family: 'Roboto-Light';
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+.signupCheck{
+    font-family: 'Roboto-Light';
+    vertical-align: middle;;
+    display: inline-block;
+}
+.signupCheckbox{ 
+    margin-top: 5px !important; 
+}
+.signupTerms{
+    margin-bottom: 0px;
+    display: inline-block;
+    margin-left: 1%;
+}
+.signinTermslink{
+    font-family: 'Roboto-Light';
+    color: #B075AC;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+/* account */
+.myaccountHeader{
+    font-family: 'Roboto-Light';
+    height: 50px;
+}
+.myaccount{
+    font-family: 'Roboto-Light';
+    margin-top: 50px;
+    text-align: center;  
+}
+.accountEdit{
+    position: fixed;
+    left: 90%;
+   top: 12px;
+   width:20px;
+}
+.accountTop{
+     background:linear-gradient(
+        rgba(149 ,99 ,148) 0%,
+        rgba(135,88,135) 12%,
+        rgba(108,70,107) 47%,
+        rgba(77,51,78) 100%
+      )
+}
+.accountTitle{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Roboto-Light';
+    text-align: center;
+    font-weight: 0 !important;
+    color: white;
+}
+.accountspan{
+    font-weight: 600 !important;
+}
+.accountImgdiv{
+    height: 100%;
+        padding-bottom: 15px;
+}
+.accountPic{
+    margin-bottom: 20px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px;
+}
+.accontEdit{  
+    color: #fff !important;
+    background: #B075AC;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 3px;
+    position: absolute;
+    width: 25px;
+    background: #B075AC;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding-left: 4px !important;
+    padding-bottom: 0px !important;
+    top: 230px;
+    right: 33%;
+}
+.accountName{
+    font-family: 'Roboto-Light'; 
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+.accountField{
+    font-family: 'Roboto-Light';
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+/* menu css */
+.nav-menu{
+    top: 0px !important;
+       background:linear-gradient(
+        
+        rgba(149 ,99 ,148) 0%,
+        rgba(135,88,135) 12%,
+        rgba(108,70,107) 47%,
+        rgba(77,51,78) 100%
+      )
+}
+.menu-profile-pic{
+    width: 112px;
+    border-radius: 50%;
+    padding: 5px;
+    height: 112px;
+    margin-left: 94px;
+    border: 1px solid white;
+}
+.menu-profile{
+    margin: 0 auto;   
+    margin-top: 10%; 
+}
+.sidemenu-name{
+    font-family: 'Roboto-Light';
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300 !important;
+}
+.sidemenu-field{
+    font-family: 'Roboto-Light';
+    color:white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 100 !important;
+}
+.menu-edit{
+    width: 25px;
+    background: #B075AC;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    top: 110px;
+    font-size: 13px;
+    right: 100px;
+    padding-left: 6px !important;
+    padding-bottom: 0px !important;
+}
+.acrodion-icon{
+    font-size: 5px !important;
+    color: white;
+    float: left;
+    margin-right: 10px;
+}
+.menu-item{
+    border: none !important;
+    font-size: 16px;
+    font-family: 'Roboto-Light';
+}
+.col-10{
+    margin-right: 5px;
+}
+.menu-text{
+    font-family: 'Roboto-Light' !important;
+    height: 24px;
+    color: white;
+    font-weight: 200 !important;
+}
+.menu-icon{
+    padding-left: 8px;
+    font-size: 17px;
+    float: left;
+    margin-right: 10%;
+    color: white;
+}
+.nav-icon{
+    color: #000 !important;
+}
+.item-accordion{
+    padding: 0px;
+    border: none;
+}
+.item-accordion1{
+    padding: 0px;
+    border: none;
+    padding-left: 15px;
+}
+
+/* Dashboard */
+.dash-content{
+    top:44px;
+}
+.dashSlidebox{
+    height: 45vh;
+    /* top: 44px; */
+}
+.dashlist-img{
+    max-width: 130px !important;
+    max-height: 130px !important;
+    border-radius: 0px !important;
+}
+.dashslide-title{
+    position: absolute;
+    z-index: 10;
+    top: 28vh;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+    font-weight: 700;
+}
+.dashlist .item{
+    min-height: 130px;
+}
+.card>.item.item-thumbnail-left, .item-thumbnail-left, .item-thumbnail-left .item-content{
+    padding-left: 160px;
+}
+.dash-title{
+    font-family: 'Roboto-Light';
+    color: #000 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 0px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    margin-left: 0px !important;
+    left: 0px !important;
+    margin-right: 0px;
+    margin-top: 3px;
+}
+.dash-badge{
+    position: absolute;
+    right: 4%;
+    font-size: 12px;
+    background: #996498;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    color: #fff !important;
+    padding-top: 0px;
+    top: 3px;
+    padding-right: 2px !important;
+    padding-left: 6px;
+}
+.dash-cart{
+
+    position: fixed;
+    right: 5%;
+   top: 12px;
+   font-size: 22px;
+   width: 22px;
+   color: black;
+}
+.dash-search{
+    position: fixed;
+    left: 75%;
+    top: 12px;
+    font-size: 22px;
+    width: 22px;
+    color: black;
+}
+
+    .dash-card{
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+        display: block;
+         width: 44% !important;
+        padding: 0;
+        height: max-content;
+        position: relative;
+        float: left;
+        margin: 10px !important;
+    }
+    
+        .dash-img {
+            box-shadow: none;
+            /* display: block; */
+            /* max-width: 100%; */
+            /* max-height: initial; */
+            /* position: static; */
+            height: 180px;
+            width: 100%;
+        }
+      .dash-name{
+        height:2em;
+        line-height:2em;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        font-family: 'Roboto-Light';
+        font-size: 14px;
+    margin: 7px 10px !important;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 0px !important;
+    }
+    .dash-price{
+        font-family: 'Roboto-Light';
+        font-size: 14px;
+        margin: 4px 10px;
+        font-weight: bold;
+        color: #8E688D;
+        margin-bottom: 10px !important;
+    }
+    .dash-regularprice{
+        font-family: 'Roboto-Light';
+        font-size: 16px;
+        margin: 4px 10px;
+        font-weight: bold;
+        color: #8E688D;
+        margin-bottom: 10px !important;
+        float: left;
+        color: black;
+        text-decoration: line-through;
+    }
+    .dash-adcart{
+        font-family: 'Roboto-Light';
+        height: 40px;
+        background: #996498;
+        text-align: center;
+        font-size: 13px;
+        color: white;
+        padding-top: 10px;
+    }
+    .dash-adcart1{
+        opacity: 0.3;
+    }
+
+
+/* my cart */
+.nav-back-icon{
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 3px !important;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+.cart-totaldiv{
+    margin-bottom: 80px;    
+}
+.cart-img{
+    width: 33.5% !important;
+    top: 10%!important;
+    height: 80% !important;
+    left: 5px;
+    bottom: 5px !important;
+    border-radius: 0 !important;
+    max-width: 33.5% !important;
+    max-height: 100% !important;
+}
+.cart-item{
+    height: auto !important;
+    padding-left: 44% !important;
+}
+.item h2{
+    white-space: unset !important;
+}
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p{
+    white-space: unset !important;
+}
+.noproduct{
+    text-align: center;
+    margin-top: 35%;
+    color: #000;
+}
+.cart-product-card{
+    margin-top: 15px;
+    height: auto !important;
+}
+.card img{
+    box-shadow: none !important;
+}
+.cart-qty{
+    font-family: 'Roboto-Light';
+    float: left;
+    color: #000 !important;
+    margin-right: 12%;
+    font-size: 14px !important;
+    }
+    .cart-name{
+        font-family: 'Roboto-Light';
+        font-size: 18px !important;
+        color:black;
+        margin:10px 0px !important;
+        text-overflow: unset !important;
+        white-space: unset !important;
+        height: auto !important;
+    }
+    .cart-minus{
+        font-family: 'Roboto-Light';
+        float: left;
+        font-size: 17px;
+        border-radius: 50%;
+}
+.cart-total{
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto-Light';
+}
+    .cart-plus{
+        width: 16px;
+    font-size: 17px;
+    border-radius: 50%;
+   }
+   .cart-price1{
+    font-family: 'Roboto-Light';
+    font-size: 16px !important;
+    color:black !important;
+    font-weight: 600;
+    text-align: right;
+    margin-right: 0px;
+}
+    .cart-price{
+        font-family: 'Roboto-Light';
+        font-size: 16px !important;
+        color:black !important;
+        font-weight: 600;
+        padding: 0px 10px;
+        float: left;
+        text-align: right;
+    }
+    .cart-add{
+        float: right;
+    }
+    .cart-product{
+        font-family: 'Roboto-Light';
+        width:100%;
+        margin: 10px 0px;
+    }
+    .cart-product1{
+        font-family: 'Roboto-Light';
+        padding: 7px;
+        width: 95%;
+        margin-left: 2.5%;
+        border: 1px solid #c7c7c7;
+    }
+    .cart-product1 p{
+        margin: 0px !important;
+    }
+    .cart-price-text{
+        font-family: 'Roboto-Light';
+        color: #000 !important;
+        float: left;
+        margin-right: 6%;
+        font-size: 14px !important;
+    }
+    .cart-close{
+        font-family: 'Roboto-Light';
+        float: right;
+        border: 1px solid #8E688D;
+        font-size: 13px;
+        border-radius: 50%;
+        color: #8E688D;
+        width: 20px;
+        padding: 2px;
+        padding-left: 5px !important;
+        padding-bottom: 0px !important;
+    }
+    .cart-total-text{
+        font-family: 'Roboto-Light';
+        font-size: 16px;
+        color: #000;
+        float: left;
+    }
+    .cart-total-price{
+        text-align: right;
+        font-family: 'Roboto-Light';
+        font-size: 16px !important;
+        color:black !important;
+        font-weight: 600;
+    }
+    .cart-total-price1{
+        text-align: right;
+        font-family: 'Roboto-Light';
+        font-size: 16px !important;
+        color:#9a9898 !important;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+    .cart-total-text1{
+        font-family: 'Roboto-Light';
+        font-size: 18px;
+        float: left;
+        margin-right: 3%;
+    }
+.cart-button{
+    font-family: 'Roboto-Light';
+    border-color: #996498 !important;
+    background-color: #996498 !important;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    height: 44px;
+    padding-top: 13px;
+}
+.cart-addtocart{
+    font-family: 'Roboto-Light';
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 44px;
+    padding-top: 13px;
+}
+.cart-row{
+    padding: 0px !important;
+}
+/* product Details */
+.silder-img{
+    font-family: 'Roboto-Light';
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+.silder-img1 {
+    font-family: 'Roboto-Light';
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+.productDetails-content{
+    margin: 0px 20px;
+    margin-top: 54px;
+    margin-bottom: 65px !important;
+}
+.slider-pager .slider-pager-page{
+    color: #996498;
+    font-size: 60%;
+}
+.productSlidebox{
+    height: 45vh;
+    top: 44px;
+}
+.dashcard{
+    height: 136px;
+}
+.slider-pager{
+    top: 42vh;
+}
+.productSlide{
+    height: 40vh;
+}
+.product-title{
+    font-family: 'Roboto-Light';
+    text-align: left;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.product-price{
+    font-size: 20px;
+    font-weight: bold;
+    }
+    .product-regularprice{
+        font-size: 22px;
+        font-weight: bold;
+        float: left;
+        text-decoration: line-through;
+        margin-right: 15px;
+        color: #847b7b;
+        }
+        p{
+            color:#000;
+        }
+        h2{
+            font-size: 18px;
+        }
+    .terms-title{
+        text-align: center;
+        color: #000000;
+        font-size: 18px;
+        margin-top: 35px !important;
+        font-weight: 600;
+    }
+.product-details{
+    font-family: 'Roboto-Light';
+    margin-top: 5% !important;
+    font-size: 16px;
+    font-weight: 200;
+    color: #444;
+    line-height: 18pt;
+}
+.product-details p{
+    margin: 0px;
+}
+.product-row{
+    font-family: 'Roboto-Light';
+    margin-top: 5% !important;
+    margin: 0% 12% ;
+    width: 80% !important;
+}
+.product-button{
+    font-family: 'Roboto-Light';
+    padding: 0px;
+    border-color: #1b1919 !important;
+    background-color: #444 !important;
+    color: #fff !important;
+    width: 85% !important;
+}
+
+/* Delivery */
+
+.delivery-card{
+    font-family: 'Roboto-Light';
+    box-shadow:none;
+    height: 200px;
+}
+.delivery-item{
+
+    height: 200px;
+    padding-left: 63% !important;
+}
+
+.delivery-card-image{
+    width: 50% !important;
+    height: 180px !important;
+    top: 10px !important;
+    left: 5px;
+    bottom: 5px !important;
+    border-radius: 0 !important;
+    max-width: 50% !important;
+    max-height: 180px !important;
+}
+.delivery-name{
+    font-family: 'Roboto-Light';
+    font-size: 18px !important;
+    color: black;
+    font-weight: 300;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+.delivery-price{
+    font-family: 'Roboto-Light';
+    padding-top: 2px;
+    font-size: 16px !important;
+    color: black !important;
+    font-weight: 400;
+    margin-right: 5%;
+    margin-bottom: 15px !important;
+}
+.delivery-qty{
+    font-family: 'Roboto-Light';
+    float: left;
+    color:#403f3f;
+    margin-right: 3%;
+    font-size: 18px !important;
+}
+.delivery-product{
+    font-family: 'Roboto-Light';
+    width: 100%;
+    margin: 10px 0px;
+    margin-bottom: 15px !important;
+}
+.delivery-form-field{
+    margin: 0 5%;
+}
+.delivery-label{
+
+}
+.delivery-float{
+    font-family: 'Roboto-Light';
+    color:#996498;
+}
+.delivery-input{
+    font-family: 'Roboto-Light';
+    color:#996498!important;
+    font-size: 18px !important;
+}
+
+
+/* about */
+.about-us {
+    font-family: 'Roboto-Light';
+    margin-top: 5% !important;
+    margin: 0% 8%;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 200;
+    color: #444;
+    line-height: 18pt;
+
+}
+.about-img{
+    width: 100%;
+    height: 36vh;
+}
+.about-imgdiv{
+    width: 100%;
+    position: fixed;
+    height: 45vh;
+    top: 55vh;
+}
+
+/* Spinner */
+
+.spinner svg {
+    width: 35px;
+    height: 35px;
+}
+
+.spinner.spinner-dark {
+    stroke: #996498 ;
+    fill: #996498;
+}
+.loading-container .loading{
+    background-color: transparent !important;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'Roboto-Regular';
+     src: url('../../../lib/ionic/fonts/Roboto-Regular.ttf') format('truetype');  
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../../../lib/ionic/fonts/Roboto-Light.ttf') format('truetype');  
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../../lib/ionic/fonts/Roboto-Bold.ttf') format('truetype');  
+}
+.back-icon{
+    color:black !important;
+}
+.dash-title{
+    text-align: center;
+}
+.dash-card-title{
+    text-align: center;
+    font-size: 15px !important;
+    height: 35px;
+    background: #CA9D7A;
+    color: white;
+    padding-top: 8px;
+    margin-top: 10% !important;
+    width: 40%;
+    margin: 0 auto !important;
+}
+.dash-card-collection{
+    font-size: 16px !important;
+    text-align: center;
+    color: black !important;
+    font-weight: 500 !important;
+    padding-top: 10px;
+}
+
+/* alert  box*/
+.button.button-positive , .button.button-positive.activated{
+    background-color: #B075AC;
+}
+
+.bar-subheader {
+        height: 50px !important;
+}
+.popup-container .popup{
+    width: 80% !important;
+}
+.item-radio .radio-icon{
+    padding: 8px !important;
+    color: #996498 !important;
+    font-size: 18px !important;
+}
+.item-radio input:checked + .radio-content .item-content{
+    color: #996498 !important;
+    background: #fff !important;
+    padding: 10px !important;
+}
+.payment-list{
+    width:70% !important;
+    margin: 0 auto;
+}
+.payment-item{
+    font-size: 14px;
+    margin: 0 auto;
+    min-height: 42px !important;
+    border-bottom: 1px solid #b3aeae !important;
+}
+.thank-img{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 40%;
+}
+.item-radio .item-content{
+    padding: 10px !important;
+}
+.thank-text{
+    color: #18e739;
+    text-align: center;
+    font-size: 35px;
+} 
+.thank-text1{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+.payment-text{
+    text-align: left;
+    margin: 0;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.payment-title{
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+.payment-type{
+    width: 77%;
+    margin: 0 auto;
+    border: 1px solid;
+}
+
+
+.tab{
+    background: #fff !important;
+    height: 210px !important;
+    min-width: 100%; 
+    top:10px;
+    bottom: 20px;
+}
+.scroller {
+    overflow-scrolling: auto !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 150px;
+    height: 225px !important;
+}
+.scrollerTab{
+    display: inline-block;
+    vertical-align: top;
+    background: #e6e0e0;
+    width: 150px;
+    margin: 0px 10px 0px 0px!important;
+    height: 225px !important;
+}
+.related-img1{
+    height: 130px;
+    width: auto;
+    display: block;
+    padding-top: 10px !important;
+    margin: 0 auto !important;
+}
+.related-title{
+    width: 150px;
+    white-space: initial;
+    font-size: 12px;
+    height: 42px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.scroll-bar-indicator{
+    visibility: hidden;
+}

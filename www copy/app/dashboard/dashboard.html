@@ -1,0 +1,59 @@
+﻿<ion-view view-title="WhomIkart" hide-nav-bar=true>
+  <div class="bar bar-header bar-light">
+    <button class="button button-icon button-clear ion-navicon nav-icon" menu-toggle="left"></button>
+    <h1 class="title dash-title" style="margin-left: 10%;">WhomIkart</h1>
+    <i class="ion-ios-cart dash-cart" ng-click="mycart()"></i>
+    <p ng-if="badge > 0" class="dash-badge">{{badge}}</p>
+  </div>
+  <ion-content class="dash-content">
+    <ion-slide-box class="dashSlidebox">
+      <ion-slide class="productSlide">
+        <img class="silder-img1" ng-src="img/Banner-4.jpg">
+        <p class="dashslide-title">Kids Wear and Soft Toys</p>
+      </ion-slide>
+      <ion-slide class="productSlide">
+        <img class="silder-img1" ng-src="img/Banner-2.jpg">
+        <p class="dashslide-title">Women’s Fashion</p>
+      </ion-slide>
+      <ion-slide class="productSlide">
+        <img class="silder-img1" ng-src="img/Banner-5.jpg">
+        <p class="dashslide-title">Mens Wear</p>
+      </ion-slide>
+      <ion-slide class="productSlide">
+        <img class="silder-img1" ng-src="img/Banner-3.jpg">
+        <p class="dashslide-title">Women’s Wear</p>
+      </ion-slide>
+      <ion-slide class="productSlide">
+        <img class="silder-img1" ng-src="img/Banner-1.jpg">
+        <p class="dashslide-title">Shop Today</p>
+      </ion-slide>
+    </ion-slide-box>
+    <div class="card dashcard">
+      <div class="list dashlist">
+        <a class="item item-thumbnail-left" href="#"  ng-click="openList(89)">
+          <img src="img/dress1.jpg" class="dashlist-img">
+          <h2 class="dash-card-title" style="margin-top: 16% !important;">WOMEN</h2>
+          <p class="dash-card-collection">COLLECTIONS</p>
+        </a>
+      </div>
+    </div>
+    <div class="card dashcard">
+      <div class="list dashlist">
+        <a class="item item-thumbnail-left" href="#"   ng-click="openList(90)">
+          <img src="img/dress3.jpg"  class="dashlist-img">
+          <h2 class="dash-card-title" style="margin-top: 16% !important;">MEN</h2>
+          <p class="dash-card-collection">COLLECTIONS</p>
+        </a>
+      </div>
+    </div>
+    <div class="card dashcard">
+      <div class="list dashlist" >
+        <a class="item item-thumbnail-left" href="#" ng-click="openList(83)">
+          <img src="img/drss3.jpg"  class="dashlist-img">
+          <h2 class="dash-card-title" style="margin-top: 16% !important;">KIDS</h2>
+          <p class="dash-card-collection">COLLECTIONS</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

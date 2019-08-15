@@ -1,0 +1,165 @@
+﻿<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-light" style="background-color:transparent;">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon nav-icon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu width="300" side="left" style="width: 300px; z-index: 0;">
+        <ion-content class="stable-bg has-expanded-header nav-menu" scroll="false">
+            <div class="menu-profile">
+                <img ng-src="img/default.png" class="menu-profile-pic">
+                <i class="ion-edit menu-edit" ng-click="openProfile()"></i>
+                <h5 class="sidemenu-name" menu-close>{{userInformation.first_name}} &nbsp;{{userInformation.last_name}}</h5>
+            </div>
+            <ion-scroll style="height: 70%;" direction="y">
+               
+                    <ion-item nav-clear class="menu-item" menu-close href="#/app/dashboard">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-home menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">Home</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" href="" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-bag menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">Categories</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                     <ion-item class="item-accordion"  ng-repeat="category in categoriesList" ng-if=" category.parent == 0" ng-show="!isGroupShown(group)" ng-click="toggleMen(men,category)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">{{category.name}}</h2>
+                            </div>
+                        </div>
+                    <ion-item class="item-accordion1" menu-close ng-repeat="category1 in subCategory" ng-if="category1.parent == category.id"  ng-show="!isMenShown(men)" ng-click="openproductlist(category1)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">{{category1.name}}</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    </ion-item>
+                    <!-- <ion-item class="item-accordion"  ng-show="!isGroupShown(group)" ng-click="toggleWomen(women)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">Women</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="item-accordion1" menu-close ng-repeat="category in categoriesList" ng-if=" category.parent == 89"  ng-show="!isWomenShown(women)" ng-click="openproductlist(category)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">{{category.name}}</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="item-accordion"  ng-show="!isGroupShown(group)" ng-click="toggleKids(kids)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">Kids</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="item-accordion1" menu-close ng-repeat="category in categoriesList" ng-if=" category.parent == 83"  ng-show="!isKidsShown(kids)" ng-click="openproductlist(category)">
+                        <div class="row">
+                            <div class="col-10">
+                            </div>
+                            <div class="col-90">
+                                <i class="ion-record acrodion-icon"></i>
+                                <h2 class="menu-text">{{category.name}}</h2>
+                            </div>
+                        </div>
+                    </ion-item> -->
+                    <ion-item nav-clear class="menu-item" menu-close href="#/app/mycart">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-ios-cart menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">My Cart</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" menu-close  href="#/app/myorders">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-clipboard menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">My Orders</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" menu-close href="#/app/support">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-help-buoy menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">Support</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" menu-close href="#/app/terms">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-laptop menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">Terms & Conditions</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" menu-close href="#/app/aboutus">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-ios-information-outline menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">About us</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item nav-clear class="menu-item" menu-close href="#" ng-click="doLogout()">
+                        <div class="row">
+                            <div class="col-10">
+                                <i class="ion-power menu-icon"></i>
+                            </div>
+                            <div class="col-90">
+                                <h2 class="menu-text">Logout</h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                
+            </ion-scroll>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

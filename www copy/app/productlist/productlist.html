@@ -1,0 +1,38 @@
+﻿<ion-view view-title="Product List" hide-nav-bar=true cache-view="false" ng-init="getProductsList()">
+  <div class="bar bar-header bar-light">
+    <button class="button button-clear" ng-click="back()">
+      <i class="icon ion-android-arrow-back nav-back-icon back-icon" ></i>
+    </button>
+    <h1 class="title dash-title">{{catagoryDetail.name}}</h1>
+    <i class="ion-search dash-search" ng-click="openSearchbar()"></i>
+    <i class="ion-ios-cart dash-cart" ng-click="mycart()"></i>
+    <p ng-if="badge > 0" class="dash-badge">{{badge}}</p>
+  </div>
+    <div class="bar bar-subheader" ng-if="showSearchbar">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="searchText" ng-change="filterFunc(searchText)" placeholder="Search">
+        </label>
+      </div>
+    </div>
+    <ion-content class="dash-content has-subheader">
+        <div class="row" style="flex-wrap: wrap;" >
+    <div class="card dash-card" ng-repeat="product in productList | filter:searchText">
+      <div ng-click="openProductDetails(product)">
+        <img src="{{product.images[0].src}}" class="dash-img">
+        <div>
+          <h2 class="dash-name">{{product.name}}</h2>
+          <!-- <h2 ng-if="product.regular_price!=''" class="dash-regularprice">&#8377;{{product.regular_price}}</h2> -->
+          <h2 class="dash-price" ng-bind-html="product.price_html"></h2>
+        </div>
+      </div>
+      <div ng-if="product.cart==false" ng-class="{ 'dash-adcart1' : product.stock_quantity==0 }"  class="dash-adcart" ng-click="addtoCart(product)">
+        ADD TO CART
+      </div>
+      <div ng-if="product.cart==true" class="dash-adcart" ng-click="removeCart(product)">
+        REMOVE FROM CART
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

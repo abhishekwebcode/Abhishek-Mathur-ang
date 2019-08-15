@@ -1,0 +1,70 @@
+﻿<ion-view view-title="Delivery" hide-nav-bar=true>
+    <div class="bar bar-header bar-light">
+        <!-- <div class="back-icon" ng-click="back()"> -->
+        <!-- <i class="icon ion-android-arrow-back nav-back-icon" ></i> -->
+        <!-- </div> -->
+        <button class="button button-clear" ng-click="back()">
+            <i class="icon ion-android-arrow-back nav-back-icon back-icon"></i>
+        </button>
+        <h1 class="title dash-title">My Cart</h1>
+        <i class="ion-ios-cart dash-cart"></i>
+        <p ng-if="badge > 0" class="dash-badge">{{badge}}</p>
+    </div>
+    <ion-content class="dash-content">
+        <div ng-if="badge != 0 ">
+            <div ng-repeat="data in cartData">
+                <div class="card cart-product-card">
+                    <a class="item item-thumbnail-left cart-item" href="#">
+                        <img class="cart-img" ng-src="{{data.images[0].src}}">
+                        <i class="ion-android-close cart-close" ng-click="removeCart(data)"></i>
+                        <h2 class="cart-name">{{data.name}}</h2>
+                        <div class="cart-product">
+                            <p class="cart-price-text">Price:</p>
+                            <p class="cart-price1">&#8377;{{data.price}}</p>
+                        </div>
+                        <div class="cart-product" ng-if="data.appSize">
+                            <p class="cart-price-text">Size:</p>
+                            <p class="cart-price1">{{data.appSize}}</p>
+                        </div>
+                        <div class="cart-product">
+                            <p class="cart-qty">Qty:</p>
+                            <div class="cart-add">
+                                <i class="ion-minus-circled cart-minus" ng-click="removeItem(data)"></i>
+                                <p class="cart-price">{{data.quantity}}</p>
+                                <i class="ion-plus-circled cart-plus" ng-click="addItem(data)"></i>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="cart-product">
+                            <p class="cart-price-text">Total:</p>
+                            <p class="cart-price1">&#8377;{{data.totalprice}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2 class="cart-total">CART TOTAL</h2>
+            <div class="cart-totaldiv">
+                <div class="cart-product1">
+                    <p class="cart-total-text">Subtotal:</p>
+                    <p class="cart-total-price">&#8377;{{subtotal}}</p>
+                </div>
+                <div class="cart-product1">
+                    <p class="cart-total-text">Shipping:</p>
+                    <p class="cart-total-price1">Flat rate</p>
+                    <p class="cart-total-price">Calculate Shipping</p>
+                </div>
+                <div class="cart-product1">
+                    <p class="cart-total-text">Total:</p>
+                    <p class="cart-total-price">&#8377;{{subtotal}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-if="badge == 0">
+            <h4 class="noproduct"> No Products Found</h4>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer" ng-if="badge != 0">
+        <div class=" cart-button " ng-click="ProceedToPay()"> Proceed To Pay
+        </div>
+    </div>
+</ion-view>

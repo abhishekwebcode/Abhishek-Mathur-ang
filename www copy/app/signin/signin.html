@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-content scroll="false">
+        <div class="signupDiv">
+            <div class="signuptopDiv" style="height: 150px;">
+                <!--<img src="img/icon.png" class="logo-img">-->
+            </div>
+        </div>
+        <div>
+            <form class="signinForm">
+                <div class="list">
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Username</span>
+                        <input type="text" class="signin-input" ng-model="user.username" placeholder="Username">
+                    </label>
+                    <label class="item item-input item-floating-label signin-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" class="signin-input" ng-model="user.password" placeholder="Password">
+                    </label>
+                </div>
+                <button class="button signinButton" ng-disabled="!user.username && !user.password"
+                        ng-click="doSignin(user)">log in
+                </button>
+            </form>
+            <p class="forgotPassword" ng-click="forgotPassword()">Forgot password?</p>
+            <p class="signinAcc">Don't have an account?
+                <span class="sigupAcc" ng-click="signup()">Sign up</span>
+            </p>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
