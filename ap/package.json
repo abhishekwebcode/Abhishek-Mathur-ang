@@ -37,7 +37,7 @@
     "load-json-file": "^5.2.0",
     "lodash": "^4.17.11",
     "node-inspector": "^0.7.5",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "session-file-store": "^1.2.0",
     "underscore": "^1.9.1",
     "write-json-file": "^3.1.0"
