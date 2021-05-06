@@ -39,7 +39,7 @@
     "node-inspector": "^0.7.5",
     "pug": "^2.0.3",
     "session-file-store": "^1.2.0",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "write-json-file": "^3.1.0"
   }
 }
