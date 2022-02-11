@@ -42,7 +42,7 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-spec-reporter": "0.0.23",
-    "lodash": "^4.16.2",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "yargs": "^5.0.0"
   }
