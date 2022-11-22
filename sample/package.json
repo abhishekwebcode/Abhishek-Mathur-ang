@@ -22,7 +22,7 @@
     "angular-mocks": "^1.5.8",
     "babel-core": "^6.11.4",
     "babel-preset-es2015": "^6.9.0",
-    "browser-sync": "^2.14.0",
+    "browser-sync": "^2.27.10",
     "canonical-path": "0.0.2",
     "del": "^2.2.1",
     "dgeni": "^0.4.2",
