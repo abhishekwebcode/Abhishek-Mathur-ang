@@ -31,7 +31,7 @@
     "dynamodb-doc": "^1.0.0",
     "ejs": "^2.6.1",
     "error-log-file": "^1.0.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "jsforce": "^1.9.1",
     "load-json-file": "^5.2.0",
